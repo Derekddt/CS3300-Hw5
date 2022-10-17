@@ -3,11 +3,21 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  #use sum method for all arrays
+  return arr.sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  #handle edge cases for 0 and 1 length arrays
+  if arr.length == 0
+    return 0
+  elsif arr.length == 1
+    return arr[0]
+  end
+  #sort the array into a new array called sorted using the sort method
+  sorted = arr.sort
+  #sum the last 2 indexes of sorted which will be the highest two numbers in the original array and return
+  return sorted[-2] + sorted[-1]
 end
 
 def sum_to_n? arr, n
